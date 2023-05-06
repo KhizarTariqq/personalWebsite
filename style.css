@@ -71,6 +71,7 @@ div.content-inner {
     display: block;
 }
 
+<<<<<<< HEAD
 @media (max-width: 768px) {
     h1 {
         width: 88%;
@@ -85,3 +86,35 @@ div.content-inner {
         padding: 20px 0px;
     }
 }
+=======
+.content {
+  position: relative;
+  transform-style: inherit;
+  transform: translateZ(-1px);
+}
+
+.background {
+  transform: translateZ(0);
+  /* Add some extra vertical padding for the parallax effect */
+  padding-top: 100vh;
+}
+
+/* Media query to adjust styles for smaller screens */
+@media (max-width: 480px) {
+  .parallax {
+    height: 50vh;
+  }
+  
+  .content {
+    padding: 50px 0;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+>>>>>>> 8543c5192408c12d00e384e385c559cfcdb537da
