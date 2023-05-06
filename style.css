@@ -29,6 +29,8 @@ body {
   padding: 100px 0;
   text-align: center;
   color: #fff;
+  position: relative;
+  z-index: 1;
 }
 
 h1 {
@@ -55,4 +57,19 @@ p {
   transform: translateZ(0);
   /* Add some extra vertical padding for the parallax effect */
   padding-top: 100vh;
+}
+
+/* Media query to adjust styles for smaller screens */
+@media (max-width: 768px) {
+  .content {
+    padding: 50px 0;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
 }
