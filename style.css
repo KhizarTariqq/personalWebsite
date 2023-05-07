@@ -49,8 +49,8 @@ h1 {
     color: #FFFFFF;
     text-align: center;
     padding: 20vh;
-    margin: 0px;
-    margin-top: -100px;
+    margin: auto;
+    margin-top: -10vh;
 }
 
 div.content-outer {
@@ -69,7 +69,6 @@ div.content-inner {
     padding: 50px 20px;
     margin: 0px auto;
     display: block;
-    white-space: nowrap;
 }
 
 @media (max-width: 768px) {
