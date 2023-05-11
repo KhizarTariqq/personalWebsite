@@ -1,87 +1,76 @@
-html, body {
-    padding: 0px;
-    margin: 0px;
+/* =============================================================================
+   My CSS
+   ========================================================================== */
+
+/* ---- base ---- */
+
+html,body{ 
+	width:100%;
+	height:100%;
+	background:#111;
 }
 
-html {
-    overflow: hidden;
+html{
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-body {
-    width: 100vw;
-    height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
-    perspective: 1px;
-    -webkit-perspective: 1px;
-    transform-style: preserve-3d;
-    -webkit-transform-style: preserve-3d;
+body{
+  font:normal 75% Arial, Helvetica, sans-serif;
 }
 
-div.parallax {
-    width: 100vw;
-    height: 120vh;
-    position: relative;
-    transform-style: preserve-3d;
-    -webkit-transform-style: preserve-3d;
+canvas{
+  display:block;
+  vertical-align:bottom;
 }
 
-div.parallax:after {
-    background-image: url('images/homepage.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    z-index: -1;
-    content: "";
-    transform: translateZ(-1px) scale(2);
-    -webkit-transform: translateZ(-1px) scale(2);
+
+/* ---- stats.js ---- */
+
+.count-particles{
+  background: #000022;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 80px;
+  color: #13E8E9;
+  font-size: .8em;
+  text-align: left;
+  text-indent: 4px;
+  line-height: 14px;
+  padding-bottom: 2px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
 }
 
-h1 {
-    width: 60%;
-    font-family: "Arial";
-    font-size: 90pt;
-    color: #FFFFFF;
-    text-align: center;
-    padding: 20vh;
-    margin: auto;
-    margin-top: -10vh;
+.js-count-particles{
+  font-size: 1.1em;
 }
 
-div.content-outer {
-    width: 100%;
-    background-color: white;
-    perspective: 2px;
-    -webkit-perspective: 2px;
+#stats,
+.count-particles{
+  -webkit-user-select: none;
+  margin-top: 5px;
+  margin-left: 5px;
 }
 
-div.content-inner {
-    width: 1200px;
-    font-family: "Arial";
-    font-size: 13pt;
-    color: #333;
-    line-height: 1.40em;
-    padding: 50px 20px;
-    margin: 0px auto;
-    display: block;
+#stats{
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
 }
 
-@media (max-width: 768px) {
-    h1 {
-        width: 88%;
-        font-size: 50pt;
-        padding: 10vh 20px;
-        float: none;
-    }
+.count-particles{
+  border-radius: 0 0 3px 3px;
+}
 
-    div.content-inner {
-        width: 80%;
-        text-align: justify;
-        padding: 20px 0px;
-    }
+
+/* ---- particles.js container ---- */
+
+#particles-js{
+  width: 100%;
+  height: 100%;
+  background-color: #b61924;
+  background-image: url('');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
 }
