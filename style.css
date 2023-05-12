@@ -44,3 +44,11 @@ h1 {
   position:absolute;
   z-index:1;
 }
+
+@media (max-width: 768px) {
+    h1 {
+        width: 88%;
+        font-size: 50pt;
+        padding: 10vh 20px;
+    }
+}
