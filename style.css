@@ -26,20 +26,35 @@ canvas{
 
 h1 {
     width: 60%;
-    font-family: 'Roboto Condensed', sans-serif;
-    font-size: 90pt;
+	font-family: 'Raleway', sans-serif;
+	font-weight:600;
+    font-size: 60pt;
+	height:12vh;
     color: #FFFFFF;
-    text-align: center;
-    padding-top: 20vh;
-	padding-bottom: 10vh;
-    margin: auto;
+	text-align: center;
+	margin:auto;
+    padding-top: 35vh;
+	padding-bottom: 2.5vh;
 	position:relative;
 	z-index:1;
 }
 
+h2 {
+    width: 60%;
+	font-family: 'Raleway', sans-serif;
+	font-weight:400;
+    font-size: 17pt;
+    color: #FFFFFF;
+    text-align: center;
+	padding-bottom: 3vh;
+    margin: auto;
+	position:relative;
+	z-index:1;	
+}
+
 img {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   display:block;
   z-index:1;
   position:relative;
@@ -68,7 +83,14 @@ img {
 @media (max-width: 768px) {
     h1 {
         width: 88%;
-        font-size: 50pt;
-        padding: 10vh 20px;
+        font-size: 30pt;
+		height: 10vh;
+		padding-bottom: 1px;
+    }
+
+    h2 {
+        width: 60%;
+        font-size: 12pt;
+		height: 6vh;
     }
 }
