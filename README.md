@@ -1,2 +1,2 @@
 # personalWebsite
-My personal website
+My personal website hosted at khizartariq.com
