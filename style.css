@@ -49,7 +49,6 @@ h1 {
 
 .h2Container {
 	padding-bottom: 3vh;
-	margin:auto;
 }
 
 h2 {
@@ -86,7 +85,7 @@ h1 {
 /* Animation */
 h2 {
   animation: animated-texth2 5s steps(29,end) 5s 1 normal both,
-             animated-cursor 600ms steps(29,end) 5s infinite;
+             animated-cursor 600ms steps(29,end) infinite;
 }
 /* text animation. Reduced width for h2 */
 @keyframes animated-texth1{
@@ -138,12 +137,21 @@ img {
 @media (max-width: 768px) {
     h1 {
         width: 88%;
-        font-size: 30pt;
+        font-size: 25pt;
     }
 
     h2 {
         width: 60%;
         font-size: 12pt;
-		height: 6vh;
     }
+	
+	@keyframes animated-texth1{
+	  from{width: 0;}
+	  to{width: 85vw;}
+	}
+
+	@keyframes animated-texth2{
+		from{width: 0;}
+		to{width: 80vw;}
+	}
 }
