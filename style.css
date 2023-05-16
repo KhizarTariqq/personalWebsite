@@ -30,7 +30,7 @@ canvas{
    border doesn't include padding */
 .h1Container {
 	padding-top: 35vh;
-	padding-bottom: 3vh;
+	padding-bottom: 1.5vh;
 }
 
 h1 {
