@@ -135,6 +135,14 @@ img {
 
 /* Mobile settings*/
 @media (max-width: 768px) {
+	.h1Container {
+		padding-bottom: 1.25vh;
+	}
+
+	.h2Container {
+		padding-bottom: 2vh;
+	}
+
     h1 {
         width: 88%;
         font-size: 25pt;
@@ -142,7 +150,7 @@ img {
 
     h2 {
         width: 60%;
-        font-size: 12pt;
+        font-size: 10pt;
     }
 	
 	@keyframes animated-texth1{
@@ -152,6 +160,6 @@ img {
 
 	@keyframes animated-texth2{
 		from{width: 0;}
-		to{width: 80vw;}
+		to{width: 70vw;}
 	}
 }
