@@ -26,6 +26,13 @@ canvas{
   vertical-align:bottom;
 }
 
+/* padding is separated from the main header to ensure the cursor
+   border doesn't include padding */
+.h1Container {
+	padding-top: 35vh;
+	padding-bottom: 3vh;
+}
+
 h1 {
     width: 60%;
 	font-family: 'Raleway', sans-serif;
@@ -36,10 +43,13 @@ h1 {
 	margin-left:auto;
 	margin-right:auto;
 	margin-bottom: 0px;
-    padding-top: 35vh;
-	padding-bottom: 3vh;
 	position:relative;
 	z-index:1;
+}
+
+.h2Container {
+	padding-bottom: 3vh;
+	margin:auto;
 }
 
 h2 {
@@ -49,10 +59,50 @@ h2 {
     font-size: 17pt;
     color: #FFFFFF;
     text-align: center;
-	padding-bottom: 3vh;
     margin: auto;
 	position:relative;
 	z-index:1;	
+}
+
+/* Type writer animation adjustments */
+h1 {
+  border-right: solid 3px transparent;
+  white-space: nowrap;
+  overflow: hidden;    
+}
+
+h2 {
+  border-right: solid 3px transparent;
+  white-space: nowrap;
+  overflow: hidden;    
+}
+
+/* Animation */
+h1 {
+  animation: animated-texth1 4s steps(29,end) 1s 1 normal both,
+             animated-cursor 600ms steps(29,end) infinite;
+}
+
+/* Animation */
+h2 {
+  animation: animated-texth2 5s steps(29,end) 5s 1 normal both,
+             animated-cursor 600ms steps(29,end) 5s infinite;
+}
+/* text animation. Reduced width for h2 */
+@keyframes animated-texth1{
+  from{width: 0;}
+  to{width: 50%;}
+}
+
+@keyframes animated-texth2{
+  from{width: 0;}
+  to{width: 30%;}
+}
+/* cursor animations */
+
+@keyframes animated-cursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
 }
 
 img {
