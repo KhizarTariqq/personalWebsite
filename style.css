@@ -173,6 +173,10 @@ h3 {
 	}
 
 	/* Landing div */
+	#landingDiv {
+		height: -webkit-fill-available;
+	}
+	
 	#h1Container {
 		padding-bottom: 1.25vh;
 	}
