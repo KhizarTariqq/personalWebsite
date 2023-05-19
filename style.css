@@ -132,6 +132,7 @@ img {
 	background-color:white;
 	height:40vh;
 	width:100vw;
+	overflow:hidden;
 }
 
 h3 {
@@ -193,7 +194,25 @@ h3 {
 	}
 	
 	/* About me div */
+	/* TODO: make top and bottom spacing even between top of header and bottom of bio */
+	#aboutMe {
+		height:30vh;
+		
+		/* TODO: fix height for older devices with shorter aspect ratio */
+	}
 	
+	h3{
+		font-size:20pt;
+		width:100vw;
+		padding-left:5vw;
+	}
+	
+	.bio {
+		font-size:12pt;
+		padding-left:8vw;
+		margin-right:auto;
+		width:85vw;
+	}
 	/* Languages div */
 	
 	/* Work exp div */
