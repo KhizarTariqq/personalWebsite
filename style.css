@@ -31,8 +31,8 @@ canvas{
 
 #landingDiv{
 	position:relative;
-	height:100vh;
-	width:100vw;
+	height:100%;
+	width:100%;
 }
 
 /* padding is separated from the main header to ensure the cursor
@@ -162,6 +162,16 @@ h3 {
 
 /* Mobile settings*/
 @media (max-width: 768px) {
+	/* Fix for mobile viewport height */
+	body {
+		min-height: 100vh;
+		min-height: -webkit-fill-available;
+	}
+
+	html {
+		height: -webkit-fill-available;
+	}
+
 	/* Landing div */
 	#h1Container {
 		padding-bottom: 1.25vh;
@@ -196,7 +206,7 @@ h3 {
 	/* About me div */
 	/* TODO: make top and bottom spacing even between top of header and bottom of bio */
 	#aboutMe {
-		height:30vh;
+		height:40%;
 		
 		/* TODO: fix height for older devices with shorter aspect ratio */
 	}
