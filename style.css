@@ -127,6 +127,7 @@ img {
 }
 
 /* About me div */
+/* TODO: add scrolling animation */
 #aboutMe {
 	position:relative;
 	background-color:white;
@@ -227,13 +228,12 @@ h3 {
 		margin-right:auto;
 		width:85vw;
 	}
+	
 	/* Languages div */
 	
 	/* Work exp div */
 	
 	/* Side projects div */
-	
-	/* Resume div */
 	
 	/* Contact me div */
 }
