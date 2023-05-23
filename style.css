@@ -106,7 +106,7 @@ h2 {
 }
 
 /* Social button image */
-img {
+.socials {
   width: 30px;
   height: 30px;
   display:block;
@@ -157,12 +157,44 @@ h3 {
     color:black;
 	position:relative;
 	padding-left:6vw;
-	margin-right:auto;
 	width:60vw;
+	padding-right:10vw;
+}
+
+#bioContainer {
+	 display:flex;
+	 align-items:center;
+}
+
+.resumeButton {
+	/*
+	TODO: perfect spacing by creating a div that ends at the end of the paragraph
+	until end of vw 
+	*/
+	border:none;
+	background:black;
+	color:white;
+	display: inline-flex;
+	align-items: center; 
+	height:7vh;
+	width:10vw;
+	justify-content:center;
+	font-size:12pt;
+}
+
+.downloadImage {
+	-webkit-filter: invert(100%); /* safari 6.0 - 9.0 */
+	filter: invert(100%);
+	padding-right:1vw;
 }
 
 /* Mobile settings*/
 @media (max-width: 768px) {
+	/* 
+		TODO: fix resume button for mobile. Instead of using flex and placing
+		it to the right. Make it appear to the bottom of the paragraph and
+		center it.
+	*/
 	/* Fix for mobile viewport height */
 	body {
 		min-height: 100vh;
