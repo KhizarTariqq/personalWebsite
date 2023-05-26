@@ -131,9 +131,11 @@ h2 {
 #aboutMe {
 	position:relative;
 	background-color:white;
-	height:40vh;
+	height:35%;
 	width:100vw;
 	overflow:hidden;
+	display: flex;
+	align-items: center;
 }
 
 h3 {
@@ -176,16 +178,18 @@ h3 {
 	color:white;
 	display: inline-flex;
 	align-items: center; 
-	height:7vh;
-	width:10vw;
+	height:55px;
+	width:180px;
 	justify-content:center;
-	font-size:12pt;
+	font-size:18pt;
 }
 
 .downloadImage {
 	-webkit-filter: invert(100%); /* safari 6.0 - 9.0 */
 	filter: invert(100%);
-	padding-right:1vw;
+	padding-right:15px;
+	height:30px;
+	width:30px;
 }
 
 /* Mobile settings*/
@@ -195,6 +199,7 @@ h3 {
 		it to the right. Make it appear to the bottom of the paragraph and
 		center it.
 	*/
+	
 	/* Fix for mobile viewport height */
 	body {
 		min-height: 100vh;
@@ -244,11 +249,11 @@ h3 {
 	/* TODO: make top and bottom spacing even between top of header and bottom of bio */
 	#aboutMe {
 		height:35%;
-		
+		display:block;
 		/* TODO: fix height for older devices with shorter aspect ratio */
 	}
 	
-	h3{
+	h3 {
 		font-size:20pt;
 		width:100vw;
 		padding-left:5vw;
@@ -259,6 +264,28 @@ h3 {
 		padding-left:8vw;
 		margin-right:auto;
 		width:85vw;
+	}
+	
+	#bioDiv {
+		
+	}
+	
+	#bioContainer {
+		flex-direction:column;
+	}
+	
+	.resumeButton {
+		width:125px;
+		height:40px;
+		font-size:18px;
+		padding-left:0;
+		box-sizing:border-box;
+	}
+	
+	.downloadImage	{
+		padding-right:10px;
+		height:20px;
+		width:20px;
 	}
 	
 	/* Languages div */

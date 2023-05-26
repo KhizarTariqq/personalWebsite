@@ -51,7 +51,7 @@ tsParticles.load('particlesJS',
         /* "mode": "bubble", */
         "parallax": {
           "enable": true,
-          "force": 40,
+          "force": 50,
           "smooth": 10
         }
       },
