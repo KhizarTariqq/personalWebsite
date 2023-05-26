@@ -15,7 +15,6 @@ html{
 canvas{
   display:block;
   vertical-align:bottom;
-  z-index:-1;
   width:100%;
   height:100%;
   position:absolute;
@@ -25,14 +24,15 @@ canvas{
 #particlesJS{
   width: 100%;
   height: 100%;
-  position:absolute;
+  position:relative;
   z-index:0;
 }
 
 #landingDiv{
-	position:relative;
+	position:absolute;
 	height:100%;
 	width:100%;
+	z-index:0;
 }
 
 /* padding is separated from the main header to ensure the cursor
