@@ -210,6 +210,10 @@ h3 {
 		height: -webkit-fill-available;
 	}
 
+	#particlesJS {
+		height: -webkit-fill-available;
+	}
+	
 	/* Landing div */
 	#landingDiv {
 		height: -webkit-fill-available;
@@ -248,7 +252,7 @@ h3 {
 	/* About me div */
 	/* TODO: make top and bottom spacing even between top of header and bottom of bio */
 	#aboutMe {
-		height:35%;
+		height:50svh;
 		display:block;
 		/* TODO: fix height for older devices with shorter aspect ratio */
 	}
