@@ -92,12 +92,12 @@ h2 {
 /* Text animation. Reduced width for h2 (since it has a smaller font)*/
 @keyframes animated-texth1{
   from{width: 0;}
-  to{width: 50%;}
+  to{width: 55%;}
 }
 
 @keyframes animated-texth2{
   from{width: 0;}
-  to{width: 30%;}
+  to{width: 25%;}
 }
 /* Cursor animations */
 @keyframes animated-cursor{
@@ -112,7 +112,6 @@ h2 {
   display:block;
   z-index:1;
   position:relative;
-  background-color:white;
   margin: 0 10px;
   -webkit-filter: invert(100%); /* safari 6.0 - 9.0 */
   filter: invert(100%);
@@ -131,7 +130,7 @@ h2 {
 #aboutMe {
 	position:relative;
 	background-color:white;
-	height:35%;
+	height:40vh;
 	width:100vw;
 	overflow:hidden;
 	display: flex;
@@ -144,11 +143,8 @@ h3 {
 	font-weight:600;
     font-size:30pt;
     color:black;
-    margin-right:auto;
-	margin-bottom:auto;
 	margin-top:0;
 	position:relative;
-	padding-top:5vh;
 	padding-left:3vw;
 }
 
@@ -161,6 +157,7 @@ h3 {
 	padding-left:6vw;
 	width:60vw;
 	padding-right:10vw;
+	margin-top:0;
 }
 
 #bioContainer {
@@ -192,14 +189,64 @@ h3 {
 	width:30px;
 }
 
+/* Skills div */
+#skills {
+	height:85vh;
+	position:relative;
+	/*background-color:black;*/
+	/*background-color:lightslategray;*/
+}
+
+h4 {
+	margin-right:auto;
+	margin-top:0;
+	color:white;
+	width:35%;
+	font-family:'Raleway', sans-serif;
+	font-weight:600;
+    font-size:30pt;
+	position:relative;
+	padding-top:5vh;
+	padding-left:3vw;
+}
+
+#skillsContainer {
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	margin-left:auto;
+	position:relative;
+	width: 100vw;
+	margin:auto;
+	flex-wrap:wrap;
+	column-gap:10px;
+	row-gap:50px;
+}
+
+.skillImage { 
+	width:200px;
+	height:200px;
+	position:relative;
+	margin:0 10px;
+	aspect-ratio:auto;
+	border-radius: 25px;
+	border: 8px solid #787878;
+	background:white;
+	padding:25px;
+	/* 
+		TODO: 
+			  Add a scrolling animation for images to appear
+	*/
+}
+
+/* Work exp div */
+
+/* Side projects div */
+
+/* Contact me div */
+
 /* Mobile settings*/
 @media (max-width: 768px) {
-	/* 
-		TODO: fix resume button for mobile. Instead of using flex and placing
-		it to the right. Make it appear to the bottom of the paragraph and
-		center it.
-	*/
-	
 	/* Fix for mobile viewport height */
 	body {
 		min-height: 100vh;
@@ -250,11 +297,12 @@ h3 {
 	}
 	
 	/* About me div */
-	/* TODO: make top and bottom spacing even between top of header and bottom of bio */
 	#aboutMe {
-		height:50svh;
-		display:block;
-		/* TODO: fix height for older devices with shorter aspect ratio */
+		height:35svh;
+		/* 
+		TODO: set height to be larger for older mobile devices with smaller viewport heights
+		height:325px;
+		*/
 	}
 	
 	h3 {
@@ -292,8 +340,27 @@ h3 {
 		width:20px;
 	}
 	
-	/* Languages div */
+	/* Skills div */
+	h4 {
+		font-size:20pt;
+		width:100vw;
+		padding-left:5vw;
+	}
 	
+	.skillImage {
+		width:70px;
+		height:70px;
+		border: 3px solid #787878;
+		padding:15px;
+	}
+	
+	#skillsContainer {
+		row-gap:15px;
+		column-gap:0px;
+	}
+	
+	#skills {
+		height:60vh;
 	/* Work exp div */
 	
 	/* Side projects div */
