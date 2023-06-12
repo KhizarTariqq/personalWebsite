@@ -6,10 +6,7 @@ html,body{
 	margin: 0px;
 	overflow-x: hidden;
 	position:relative;
-}
-
-html{
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 canvas{
@@ -28,6 +25,29 @@ canvas{
   z-index:0;
 }
 
+/* navigation bar */
+.logo {
+  background-color: #333;
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+
 #landingDiv{
 	position:absolute;
 	height:100%;
@@ -35,7 +55,7 @@ canvas{
 	z-index:0;
 }
 
-/* padding is separated from the main header to ensure the cursor
+/* Padding is separated from the main header to ensure the cursor
    border doesn't include padding */
 #h1Container {
 	padding-top: 35vh;
@@ -85,19 +105,19 @@ h2 {
 	border-right: solid 3px transparent;
 	white-space: nowrap;
 	overflow: hidden;   
-    animation: animated-texth2 5s steps(29,end) 5s 1 normal both,
+    animation: animated-texth2 3.5s steps(29,end) 5s 1 normal both,
              animated-cursor 600ms steps(29,end) infinite;  
 }
 
 /* Text animation. Reduced width for h2 (since it has a smaller font)*/
 @keyframes animated-texth1{
   from{width: 0;}
-  to{width: 55%;}
+  to{width: 800px;}
 }
 
 @keyframes animated-texth2{
   from{width: 0;}
-  to{width: 25%;}
+  to{width: 380px;}
 }
 /* Cursor animations */
 @keyframes animated-cursor{
@@ -113,7 +133,7 @@ h2 {
   z-index:1;
   position:relative;
   margin: 0 10px;
-  -webkit-filter: invert(100%); /* safari 6.0 - 9.0 */
+  -webkit-filter: invert(100%);
   filter: invert(100%);
 }
 
@@ -130,7 +150,7 @@ h2 {
 #aboutMe {
 	position:relative;
 	background-color:white;
-	height:40vh;
+	height:360px;
 	width:100vw;
 	overflow:hidden;
 	display: flex;
@@ -166,10 +186,8 @@ h3 {
 }
 
 .resumeButton {
-	/*
-	TODO: perfect spacing by creating a div that ends at the end of the paragraph
-	until end of vw 
-	*/
+	/* TODO: space button in imddle of remaining space in div both horizontally and vertically */
+	
 	border:none;
 	background:black;
 	color:white;
@@ -191,22 +209,20 @@ h3 {
 
 /* Skills div */
 #skills {
-	height:780px;
+	height:710px;
 	position:relative;
 	background-color:#07223d;
 }
 
 h4 {
-	margin-right:auto;
-	margin-top:0;
 	color:white;
 	width:35%;
-	font-family:'Raleway', sans-serif;
-	font-weight:600;
-    font-size:30pt;
+	font-family: 'Mukta', sans-serif;
+	font-weight:500;
+    font-size:85pt;
 	position:relative;
-	padding-top:5vh;
-	padding-left:3vw;
+	margin:auto;
+	text-align:center;
 }
 
 #skillsContainer {
@@ -219,12 +235,12 @@ h4 {
 	margin:auto;
 	flex-wrap:wrap;
 	column-gap:10px;
-	row-gap:50px;
+	row-gap:30px;
 }
 
 .skillImage { 
-	width:200px;
-	height:200px;
+	width:150px	;
+	height:150px;
 	position:relative;
 	margin:0 10px;
 	aspect-ratio:auto;
@@ -232,16 +248,16 @@ h4 {
 	border: 8px solid #787878;
 	background:white;
 	padding:25px;
-	/* 
-		TODO: 
-			  Add a scrolling animation for images to appear
-	*/
+	/* TODO: Add a scrolling animation for images to appear */
 }
 
 /* Portfolio div */
 #portfolio {
-	/* height:100vh; */
+	height:70vh;
+	position:relative;
+	background-color:#07223d;
 }
+
 /* Work exp div */
 
 /* Contact me div */
@@ -294,16 +310,12 @@ h4 {
 
 	@keyframes animated-texth2{
 		from{width: 0;}
-		to{width: 70vw;}
+		to{width: 55vw;}
 	}
 	
 	/* About me div */
 	#aboutMe {
 		height:330px;
-		/* 
-		TODO: set height to be larger for older mobile devices with smaller viewport heights
-		height:325px;
-		*/
 	}
 	
 	h3 {
@@ -339,11 +351,20 @@ h4 {
 	}
 	
 	/* Skills div */
+	#skillsContainer {
+		row-gap:15px;
+		column-gap:0px;
+	}
+	
+	#skills {
+		height:470px;
+	}
+	
 	h4 {
-		font-size:20pt;
+		font-size:40pt;
 		width:100vw;
-		padding-left:5vw;
-		margin-bottom:25px;
+		padding-top:15px;
+		padding-bottom:5px;
 	}
 	
 	.skillImage {
@@ -353,13 +374,6 @@ h4 {
 		padding:15px;
 	}
 	
-	#skillsContainer {
-		row-gap:15px;
-		column-gap:0px;
-	}
-	
-	#skills {
-		height:450px;
 	/* Work exp div */
 	
 	/* Side projects div */
