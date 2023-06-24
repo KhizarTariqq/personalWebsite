@@ -11,123 +11,129 @@
 	<!-- Google Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=block" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=block" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=block" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@500&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
 </head>
 
 <body>
+	<!-- particles.js container (background for landing page) -->
+	<div id="particlesJS">
+		<!-- landing div -->
+		<div id="landingDiv">
+			<!-- 
+				Container is used for h1 and h2 to separate the padding from the actual header
+				for the typewriter animation.
+			-->	
+			<div id="h1Container">
+				<h1>Hi, I'm Khizar Tariq</h1>
+			</div>
 
-<!-- particles.js container (background for landing page) -->
-<div id="particlesJS">
-	<!-- landing div -->
-	<div id="landingDiv">
-		<!-- 
-			Container is used for h1 and h2 to separate the padding from the actual header
-			for the typewriter animation.
-		-->	
-		<div id="h1Container">
-			<h1>Hi, I'm Khizar Tariq</h1>
+			<div id= "h2Container">
+				<h2>Developer, Gamer and Cyclist</h2>
+			</div>
+			
+			<!-- socials buttons -->
+			<div id="socialButtons">
+				<a href="https://www.linkedin.com/in/khizar-tariq/" target="_blank"><img src="images/socials/linkedin.svg" class="socials" alt="Linkedin"/></a>
+				<a href="https://github.com/KhizarTariqq/" target="_blank"><img src="images/socials/github.svg" class="socials" alt="GitHub"/></a>
+				<a href="mailto:khizar.tariq@mail.utoronto.ca" target="_blank"><img src="images/socials/email.svg" class="socials" alt="E-mail"/></a>
+			</div>
 		</div>
+	</div>
 
-		<div id= "h2Container">
-			<h2>Developer, Gamer and Cyclist</h2>
+	<!-- Scripts for particlesJS-->
+	<script src="tsparticles.bundle.min.js"></script>
+	<script src="js/app.js"></script>
+
+	<!-- Navigation bar  -->
+    <nav id="navbar">
+        <div class="navbarContainer">
+            <a href="#landingDiv" id="navbarLogo">Khizar Tariq</a>
+            <div class="navbarToggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbarMenu">
+                <li class="navbarItem">
+                    <a href="#landingDiv" class="navbarLinks">Home</a>
+                </li>
+
+                <li class="navbar__item">
+                    <a href="#aboutMe" class="navbarLinks">About</a>
+                </li>
+
+                <li class="navbar__item">
+                    <a href="#skills" class="navbarLinks">Skills</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+	<!-- Script for navbar to appear/disappear on scroll -->
+	<script src="js/navBar.js"></script>
+
+	<!-- 
+		TODO:
+			1. Create mobile navigation bar
+			2. Add CSS scrolling animations
+			3. Create timeline for work experience
+			4. Create contactMeDiv that says "Let's get in touch!" includes email, linkedin 
+	-->
+
+	<!-- About me div -->
+	<div id="aboutMe">
+		<div id="bioDiv">
+			<h3> A little bit about me:</h3>
+			<div id="bioContainer">	
+				<p class="bio"> I am currently a fourth year student studying Computer Science at the University of Toronto
+								Mississauga. I love programming, emerging technologies, and creating software that is helpful
+								to others. Feel free to scroll down to take a look at my skillset, work experience and side projects!
+				</p>
+				
+				<a href="files/resume.pdf" download="resume">
+					<button class="resumeButton" type="button">
+						<img src="images/misc/download.svg" class="downloadImage" alt="download"/>
+						Resume
+					</button>
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- Skills div -->
+	<div id="skills">
+		<h4>Skills</h4>
+		<div id="skillsContainer">
+			<!-- Languages Images -->
+			<img src="images/language%20images/java.svg#svgView(preserveAspectRatio(xMidYMid meet))" class="skillImage"/>
+			<img src="images/language%20images/python.svg" class="skillImage"/>
+			<img src="images/language%20images/swift.svg" class="skillImage"/>
+			<img src="images/language%20images/c.svg" class="skillImage"/>
+			<img src="images/language%20images/c++.svg" class="skillImage"/>
+			<img src="images/language%20images/html.svg" class="skillImage"/>
+			<img src="images/language%20images/css.svg" class="skillImage"/>
+			<img src="images/language%20images/javascript.svg" class="skillImage"/>
+			<img src="images/language%20images/nodejs.svg" class="skillImage"/>
 		</div>
 		
-		<!-- socials buttons -->
-		<div id="socialButtons">
-			<a href="https://www.linkedin.com/in/khizar-tariq/" target="_blank"><img src="images/socials/linkedin.svg" class="socials" alt="Linkedin"/></a>
-			<a href="https://github.com/KhizarTariqq/" target="_blank"><img src="images/socials/github.svg" class="socials" alt="GitHub"/></a>
-			<a href="mailto:khizar.tariq@mail.utoronto.ca" target="_blank"><img src="images/socials/email.svg" class="socials" alt="E-mail"/></a>
-		</div>
 	</div>
-</div>
 
-<!-- Scripts for particlesJS-->
-<script src="tsparticles.bundle.min.js"></script>
-<script src="js/app.js"></script>
+	<!-- Portfolio div --
+	<div id="portfolio">
+		<h4>Portfolio</h4>
+	</div> -->
 
-<!-- navigation bar  -->
-<nav id="navBar">
-	<div id="navBarContainer"
-		<!-- Logo -->
-		<div id="logo">Khizar Tariq</div>
 
-		<!-- menu -->
-		<ul id="menu">
-			<li><a href="#landingDiv">Home</a></li>
-			<li><a href="#aboutMe">About</a></li>
-			<li><a href="#skills">Skills</a></li>
-		</ul>
+	<!-- work experience div -->
+	<div id="workExp">
+
 	</div>
-</nav> 
 
-<!-- Script for navbar to appear/disappear on scroll -->
-<script src="js/navBar.js"></script>
+	<!-- contact me div -->
+	<div id="contactMe">
 
-<!-- 
-	TODO:
-		1. Add top navbar top left: Khizar Tariq (sends to landingDiv, Top right: About Me, Portfolio, Work Experience, Contact Me
-		2. Add CSS scrolling animations
-		3. Create timeline for work experience
-		4. Create contactMeDiv that says "Let's get in touch!" includes email, linkedin 
--->
-
-<!-- About me div -->
-<div id="aboutMe">
-	<div id="bioDiv">
-		<h3> A little bit about me:</h3>
-		<div id="bioContainer">	
-			<p class="bio"> I am currently a fourth year student studying Computer Science at the University of Toronto
-							Mississauga. I love programming, emerging technologies, and creating software that is helpful
-							to others. Feel free to scroll down to take a look at my skillset, work experience and side projects!
-			</p>
-			
-			<a href="files/resume.pdf" download="resume">
-				<button class="resumeButton" type="button">
-					<img src="images/misc/download.svg" class="downloadImage" alt="download"/>
-					Resume
-				</button>
-			</a>
-		</div>
 	</div>
-</div>
-
-<!-- Skills div -->
-<div id="skills">
-	<h4>Skills</h4>
-	<div id="skillsContainer">
-		<!-- Languages Images -->
-		<img src="images/language%20images/java.svg#svgView(preserveAspectRatio(xMidYMid meet))" class="skillImage"/>
-		<img src="images/language%20images/python.svg" class="skillImage"/>
-		<img src="images/language%20images/swift.svg" class="skillImage"/>
-		<img src="images/language%20images/c.svg" class="skillImage"/>
-		<img src="images/language%20images/c++.svg" class="skillImage"/>
-		<img src="images/language%20images/html.svg" class="skillImage"/>
-		<img src="images/language%20images/css.svg" class="skillImage"/>
-		<img src="images/language%20images/javascript.svg" class="skillImage"/>
-		<img src="images/language%20images/nodejs.svg" class="skillImage"/>
-	</div>
-	
-</div>
-
-<!-- Portfolio div --
-<div id="portfolio">
-	<h4>Portfolio</h4>
-</div> -->
-
-
-<!-- work experience div -->
-<div id="workExp">
-
-</div>
-
-<!-- contact me div -->
-<div id="contactMe">
-
-</div>
 </body>
 </html>

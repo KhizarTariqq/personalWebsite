@@ -5,11 +5,8 @@ html,body{
 	padding: 0px;
 	margin: 0px;
 	position:relative;
-	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
-html {
 	overflow-x: hidden;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 canvas{
@@ -30,80 +27,156 @@ canvas{
   left:0;
 }
 
-/* navigation bar */
-#navBar {
-	height:75px;
-	position:fixed;
-	z-index:3;
-	background-color:black;
-	transition: 0.5s;
-	top:0;
-	width:100%
+/* New Navbar */
+a {
+  color: #000;
 }
 
-#navBarContainer { 
-	height:100%;
-	display:flex;
-	justify-content:space-between;
-	position:relative;
-}
-
-#logo {
-	/* background-color: #333; */
-	padding-left:40px;
-	margin-top:auto;
-	margin-bottom:auto;
-	color:white;
+#navbar{
+	background: black;
+	height: 80px;
+	width:100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1rem;
+	position: fixed;
+	top: 0;
+	z-index: 2;
+	transition: 0.3s;
 	font-family: 'Inconsolata', monospace;
+}
+
+.navbarContainer{
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  z-index: 1;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+#navbarLogo {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	text-decoration: none;
 	font-size:18pt;
+	color:white;
 }
 
-#menu {
-  font-family: 'Inconsolata', monospace;
-  margin-top:auto;
-  margin-bottom:auto;
+.navbarMenu{
+	display: flex;
+	align-items: center;
+	list-style: none;
 }
 
-a{
-    position: relative;
-    text-decoration: none;
-    color: white;
-	padding-bottom:5px;
-}
-
-a:after{
-    content: "";
-    position: absolute;
-    background-color: white;
-    height: 3px;
-    width: 0;
-    left: 0;
-    bottom: -10px;
-    transition: 0.3s;
-}
-
-a:hover{
-    color: white;
-}
-
-a:hover:after{
-    width: 100%;
-}
-
-nav ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	text-decoration: none
-}
-
-nav ul li {
-	float:left;
-	padding-right:70px;
+.navbarLinks{
+	color: white;
+	text-decoration: none;
+	display: inline-block;
+	padding: 2rem;
+	position: relative;
 	font-size:15pt;
-	text-decoration: none
+	font-family: 'Inconsolata', monospace;
 }
 
+@media (max-width: 768px){
+	.navbarContainer {
+	display: flex;
+	justify-content: space-between;
+	height: 80px;
+	z-index: 1;
+	width: 100%;
+	max-width: 1300px;
+	padding: 0;
+	}
+
+	.navbarMenu {
+	display: grid;
+	grid-template-columns: auto;
+	margin: 0;
+	width: 100vw;
+	position: absolute;
+	top: -1000px;
+	opacity: 1;
+	transition: all 0.5s ease;
+	z-index: -1;
+	padding:0;
+	}
+
+	.navbarMenu.active {
+	background: #131313;
+	top: 100%;
+	opacity: 1;
+	transition: all 0.5s ease;
+	z-index: 99;
+	height: 40vh;
+	font-size: 2vh;
+	}
+
+	#navbarLogo {
+	padding-left: 20px;
+
+	}
+
+	.navbarToggle .bar {
+	width: 25px;
+	height: 3px;
+	margin: 5px auto;
+	transition: all 0.3s ease-in-out;
+	background: #fff;
+	}
+
+	.navbarItem {
+	width: 100%;
+	}
+
+	.navbarLinks {
+	text-align: center;
+	padding:0;
+	width: 100%;
+	display: table;
+	}
+
+
+	.button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 80%;
+	height: 80px;
+	margin: 0;
+	}
+
+	#mobile-menu {
+		margin-top:auto;
+		margin-bottom:auto;
+		padding-right:20px;
+	}
+
+	.navbarToggle .bar {
+	display: block;
+	cursor: pointer;
+	}
+
+	#mobile-menu.is-active .bar:nth-child(2) {
+	opacity: 0;
+
+	}
+
+	#mobile-menu.is-active .bar:nth-child(1) {
+	transform: translateY(8px) rotate(45deg);
+	}
+
+	#mobile-menu.is-active .bar:nth-child(3) {
+	transform: translateY(-8px) rotate(-45deg);
+	}
+}
+
+/* Landing div */
 #landingDiv{
 	position:absolute;
 	height:100%;
@@ -113,12 +186,12 @@ nav ul li {
 
 /* Padding is separated from the main header to ensure the cursor
    border doesn't include padding */
-#h1Container {
+#h1Container{
 	padding-top: 35vh;
 	padding-bottom: 1.5vh;
 }
 
-h1 {
+h1{
     width: 60%;
 	font-family: 'Raleway', sans-serif;
 	font-weight:600;
@@ -132,11 +205,11 @@ h1 {
 	z-index:1;
 }
 
-#h2Container {
+#h2Container{
 	padding-bottom: 3vh;
 }
 
-h2 {
+h2{
     width: 60%;
 	font-family: 'Raleway', sans-serif;
 	font-weight:400;
@@ -149,7 +222,7 @@ h2 {
 }
 
 /* Type writer animation for h1 and h2*/
-h1 {
+h1{
 	border-right: solid 3px transparent;
 	white-space: nowrap;
 	overflow: hidden;    
@@ -157,7 +230,7 @@ h1 {
              animated-cursor 600ms steps(29,end) infinite;
 }
 
-h2 {
+h2{
 	border-right: solid 3px transparent;
 	white-space: nowrap;
 	overflow: hidden;   
@@ -182,7 +255,7 @@ h2 {
 }
 
 /* Social button image */
-.socials {
+.socials{
   width: 30px;
   height: 30px;
   display:block;
@@ -194,7 +267,7 @@ h2 {
 }
 
 /* div to group social buttons */
-#socialButtons {
+#socialButtons{
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -202,8 +275,7 @@ h2 {
 }
 
 /* About me div */
-/* TODO: add scrolling animation */
-#aboutMe {
+#aboutMe{
 	position:relative;
 	background-color:white;
 	height:360px;
@@ -213,7 +285,7 @@ h2 {
 	z-index:0;
 }
 
-h3 {
+h3{
     width:35%;
 	font-family:'Raleway', sans-serif;
 	font-weight:600;
@@ -224,7 +296,7 @@ h3 {
 	padding-left:3vw;
 }
 
-.bio {
+.bio{
 	font-family:'Raleway', sans-serif;
 	font-weight:400;
     font-size:20pt;
@@ -236,12 +308,12 @@ h3 {
 	margin-top:0;
 }
 
-#bioContainer {
+#bioContainer{
 	 display:flex;
 	 align-items:center;
 }
 
-.resumeButton {
+.resumeButton{
 	/* TODO: space button in imddle of remaining space in div both horizontally and vertically */
 	
 	border:none;
@@ -255,8 +327,8 @@ h3 {
 	font-size:18pt;
 }
 
-.downloadImage {
-	-webkit-filter: invert(100%); /* safari 6.0 - 9.0 */
+.downloadImage{
+	-webkit-filter: invert(100%);
 	filter: invert(100%);
 	padding-right:15px;
 	height:30px;
@@ -264,13 +336,13 @@ h3 {
 }
 
 /* Skills div */
-#skills {
+#skills{
 	height: 710px;
 	position:relative;
 	background-color:#07223d;
 }
 
-h4 {
+h4{
 	color:white;
 	width:35%;
 	font-family: 'Mukta', sans-serif;
@@ -281,7 +353,7 @@ h4 {
 	text-align:center;
 }
 
-#skillsContainer {
+#skillsContainer{
 	display:flex;
 	align-items:center;
 	justify-content:center;
@@ -294,9 +366,9 @@ h4 {
 	row-gap:30px;
 }
 
-.skillImage { 
-	width:150px	;
-	height:150px;
+.skillImage{ 
+	width:7vw;
+	height:7vw;
 	position:relative;
 	margin:0 10px;
 	aspect-ratio:auto;
@@ -308,7 +380,7 @@ h4 {
 }
 
 /* Portfolio div */
-#portfolio {
+#portfolio{
 	height:70vh;
 	position:relative;
 	background-color:#07223d;
@@ -319,46 +391,68 @@ h4 {
 /* Contact me div */
 
 /* Mobile settings*/
-@media (max-width: 768px) {
+@media (max-width: 768px){
 	/* Fix for mobile viewport height */
-	body {
+	body{
 		min-height: 100vh;
 		min-height: -webkit-fill-available;
 	}
 
-	html {
+	html{
 		height: -webkit-fill-available;
 	}
 
-	#particlesJS {
+	#particlesJS{
 		height: -webkit-fill-available;
 		height:100svh;
 	}
 	
 	/* navBar */
-	#navBar {
-		/* Temporarily hidden until hamburger menu is made for mobile */
-		visibility:hidden;
+	#navBar{
+		/* Temporarily hidden until hamburger menu is made for mobile 
+		visibility:hidden;*/
+		
+		height:65px;
 	}
+	
+	/* Hide the desktop menu on mobile */
+	#menu{
+		display:none;
+	}
+	
+	#logo{
+		font-size:14pt;
+		padding-left:25px;
+	}
+	
+	#menuIcon{
+		display:block;
+		height:30px;
+		width:30px;
+		margin-top:auto;
+		margin-bottom:auto;
+		padding-right:25px;
+	}
+	
 	/* Landing div */
-	#landingDiv {
+	#landingDiv{
 		height: -webkit-fill-available;
 	}
 	
-	#h1Container {
+	#h1Container{
 		padding-bottom: 1.25vh;
 	}
 
-	#h2Container {
+	#h2Container{
 		padding-bottom: 2vh;
 	}
 
-    h1 {
+    h1{
         width: 88%;
         font-size: 25pt;
     }
 
-    h2 {
+    h2{
         width: 60%;
         font-size: 10pt;
     }
@@ -376,17 +470,17 @@ h4 {
 	}
 	
 	/* About me div */
-	#aboutMe {
+	#aboutMe{
 		height:330px;
 	}
 	
-	h3 {
+	h3{
 		font-size:20pt;
 		width:100vw;
 		padding-left:5vw;
 	}
 	
-	.bio {
+	.bio{
 		font-size:12pt;
 		padding-left:8vw;
 		margin-right:auto;
@@ -394,11 +488,11 @@ h4 {
 	}
 	
 	
-	#bioContainer {
+	#bioContainer{
 		flex-direction:column;
 	}
 	
-	.resumeButton {
+	.resumeButton{
 		width:125px;
 		height:40px;
 		font-size:18px;
@@ -406,30 +500,30 @@ h4 {
 		box-sizing:border-box;
 	}
 	
-	.downloadImage	{
+	.downloadImage{
 		padding-right:10px;
 		height:20px;
 		width:20px;
 	}
 	
 	/* Skills div */
-	#skillsContainer {
+	#skillsContainer{
 		row-gap:15px;
 		column-gap:0px;
 	}
 	
-	#skills {
+	#skills{
 		height:470px;
 	}
 	
-	h4 {
+	h4{
 		font-size:40pt;
 		width:100vw;
 		padding-top:15px;
 		padding-bottom:5px;
 	}
 	
-	.skillImage {
+	.skillImage{
 		width:60px;
 		height:60px;
 		border: 4px solid #787878;

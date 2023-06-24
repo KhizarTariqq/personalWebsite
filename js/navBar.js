@@ -1,21 +1,34 @@
-var lastScrollTop; // This Varibale will store the top position
+var menuVisible = false;
 
-navbar = document.getElementById('navBar'); // Get The NavBar
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function(){
+	var currentScrollPos = window.pageYOffset;
+	if (prevScrollpos > currentScrollPos){
+		document.getElementById("navbar").style.top = "0";
+	}
+	else{
+		document.getElementById("navbar").style.top = "-80px";
+		
+		if(menuVisible){
+			mMenu();
+		}
+	}
+	prevScrollpos = currentScrollPos;
+}
 
-window.addEventListener('scroll',function(){
- //on every scroll this funtion will be called
-  
-  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  //This line will get the location on scroll
-  
-  if(scrollTop > lastScrollTop){ //if it will be greater than the previous
-    navbar.style.top='-75px';
-    //set the value to the negetive of height of navbar 
-  }
-  
-  else{
-    navbar.style.top='0';
-  }
-  
-  lastScrollTop = scrollTop; //New Position Stored
-});
+
+const menu = document.querySelector('#mobile-menu');
+const links = document.querySelector('.navbarMenu');
+
+const mMenu = () => {
+  menuVisible = menu.classList.toggle('is-active');
+  menuVisible = links.classList.toggle('active');
+}
+
+menu.addEventListener('click', mMenu);
+
+const listItems = document.getElementsByClassName('navbarItem');
+
+for (let i=0; i < listItems.length; i++){
+	listItems[i].addEventListener('click',mMenu);
+}
