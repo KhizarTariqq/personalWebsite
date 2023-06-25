@@ -364,11 +364,12 @@ h4{
 	flex-wrap:wrap;
 	column-gap:10px;
 	row-gap:30px;
+	overflow:hidden;
 }
 
 .skillImage{ 
-	width:7vw;
-	height:7vw;
+	width:8vw;
+	height:8vw;
 	position:relative;
 	margin:0 10px;
 	aspect-ratio:auto;
@@ -376,7 +377,63 @@ h4{
 	border: 8px solid #787878;
 	background:white;
 	padding:25px;
-	/* TODO: Add a scrolling animation for images to appear */
+	opacity: 0;
+	transform: translateY(100px);
+	transition: transform 1s, opacity 1s;
+}
+
+/* Scrolling animation */
+.fadeIn {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.fadeIn2 {
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay:0.25s;
+}
+
+.fadeIn3 {
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay:0.5s;
+}
+
+.fadeIn4 {
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay:0.75s;
+}
+
+.fadeIn5 {
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay:1s;
+}
+
+.fadeIn6 {
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay:1.25s;
+}
+
+.fadeIn7 {
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay:1.5s;
+}
+
+.fadeIn8 {
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay:1.75s;
+}
+
+.fadeIn9 {
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay:2s;
 }
 
 /* Portfolio div */
