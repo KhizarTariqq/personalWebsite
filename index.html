@@ -50,11 +50,13 @@
     <nav id="navbar">
         <div class="navbarContainer">
             <a href="#home" id="navbarLogo">Khizar Tariq</a>
+			
             <div class="navbarToggle" id="mobile-menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </div>
+			
             <ul class="navbarMenu">
                 <li class="navbarItem">
                     <a href="#home" class="navbarLinks">Home</a>
@@ -67,6 +69,10 @@
                 <li class="navbarItem">
                     <a href="#skills" class="navbarLinks">Skills</a>
                 </li>
+				
+                <li class="navbarItem">
+                    <a href="#contact" class="navbarLinks">Contact Me</a>
+                </li>				
             </ul>
         </div>
     </nav>
@@ -86,6 +92,7 @@
 	<div id="aboutMe">
 		<div id="bioDiv">
 			<h3> A little bit about me:</h3>
+			
 			<div id="bioContainer">	
 				<p class="bio"> I am currently a fourth year student studying Computer Science at the University of Toronto
 								Mississauga. I love programming, emerging technologies, and creating software that is helpful
@@ -93,7 +100,7 @@
 				</p>
 				
 				<a href="files/resume.pdf" download="resume">
-					<button class="resumeButton" type="button">
+					<button id="resumeButton" type="button">
 						<img src="images/misc/download.svg" class="downloadImage" alt="download"/>
 						Resume
 					</button>
@@ -105,6 +112,7 @@
 	<!-- Skills div -->
 	<div id="skills">
 		<h4>Skills</h4>
+		
 		<div id="skillsContainer">
 			<!-- Languages Images -->
 			<img src="images/language%20images/java.svg#svgView(preserveAspectRatio(xMidYMid meet))" class="skillImage"/>
@@ -124,17 +132,31 @@
 	<!-- Portfolio div --
 	<div id="portfolio">
 		<h4>Portfolio</h4>
+		
+		<div id="portfolioContainer">
+			<div class="project">
+			
+			</div>
+		</div>
 	</div> -->
 
 
-	<!-- work experience div -->
+	<!-- work experience div --
 	<div id="workExp">
 
-	</div>
+	</div> -->
 
 	<!-- contact me div -->
-	<div id="contactMe">
-
+	<div id="contact">
+		<div id="contactContainer">
+			<h6>Let's get in touch!</h6>
+			<a href="mailto:khizar.tariq@mail.utoronto.ca">
+				<button id="emailButton" type="button">
+					<img src="images/socials/email.svg" id="emailIcon" alt="E-mail"/>
+					<span id="emailText">Email Me</span>
+				</button>
+			</a>
+		</div>
 	</div>
 </body>
 </html>
