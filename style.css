@@ -335,6 +335,7 @@ h3{
 /* Skills div */
 #skills{
 	height: 75vh;
+	min-height:600px;
 	position:relative;
 	background-color:#072f59;
 	overflow:hidden;
