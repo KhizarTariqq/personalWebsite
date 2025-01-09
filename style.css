@@ -254,8 +254,10 @@ h2{
 
 /* Social button image */
 .socials{
-  width: 30px;
-  height: 30px;
+  width: 4vh;
+  height: 4vh;
+  min-width: 30px;
+  min-height: 30px;
   display:block;
   z-index:1;
   position:relative;
@@ -529,7 +531,7 @@ h6{
 #emailButton{
 	width:10vw;
 	height:6vh;
-	
+	padding:10px;
 	/* Min height and width used to keep "Email Me" on one line for smaller displays */
 	min-width:192px;
 	min-height:60px;
@@ -730,5 +732,9 @@ h6{
 @media (min-height: 1080px){
 	#skills{
 		min-height:650px;
+	}
+	
+	#emailText{
+		font-size:25px;
 	}
 }
