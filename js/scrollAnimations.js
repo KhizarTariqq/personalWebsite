@@ -20,6 +20,8 @@ const callback = (entries, observer) => {
 		listImgs[13].classList.add("fadeIn14")
 		listImgs[14].classList.add("fadeIn15")
 		listImgs[15].classList.add("fadeIn16")
+		listImgs[16].classList.add("fadeIn17")
+		listImgs[17].classList.add("fadeIn18")
     }
   })
 }

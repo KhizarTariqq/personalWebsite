@@ -476,6 +476,19 @@ h4{
   transform: translateY(0px);
   transition-delay:3.75s;
 }
+
+.fadeIn17 {
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay:4s;
+}
+
+.fadeIn18 {
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay:4.25s;
+}
+
 /* Portfolio div */
 #portfolio{
 	height:70vh;
@@ -710,5 +723,12 @@ h6{
 	#emailIcon{
 		height:27px;
 		width:27px;
+	}
+}
+
+/* Desktop 1080p settings*/
+@media (min-height: 1080px){
+	#skills{
+		min-height:650px;
 	}
 }
