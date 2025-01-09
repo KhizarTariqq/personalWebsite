@@ -334,8 +334,8 @@ h3{
 
 /* Skills div */
 #skills{
-	height: 75vh;
-	min-height:600px;
+	height: 65vh;
+	min-height:700px;
 	position:relative;
 	background-color:#072f59;
 	overflow:hidden;
@@ -367,8 +367,8 @@ h4{
 }
 
 .skillImage{ 
-	width:8vw;
-	height:8vw;
+	width:6vw;
+	height:6vw;
 	position:relative;
 	margin:0 10px;
 	aspect-ratio:auto;
@@ -435,6 +435,47 @@ h4{
   transition-delay:2s;
 }
 
+.fadeIn10 {
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay:2.25s;
+}
+
+.fadeIn11 {
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay:2.5s;
+}
+
+.fadeIn12 {
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay:2.75s;
+}
+
+.fadeIn13 {
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay:3s;
+}
+
+.fadeIn14 {
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay:3.25s;
+}
+
+.fadeIn15 {
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay:3.5s;
+}
+
+.fadeIn16 {
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay:3.75s;
+}
 /* Portfolio div */
 #portfolio{
 	height:70vh;
